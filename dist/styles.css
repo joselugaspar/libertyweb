@@ -113,8 +113,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
   padding: var(--space-xl);
   display: grid;
   place-items: center;
-  background: var(--color-accent);
-  color: var(--color-accent-ink);
+  background: var(--color-ink);
+  color: var(--color-paper);
 }
 .sun-mark {
   width: min(28rem, 78%);
@@ -205,7 +205,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .visit dd { margin: var(--space-xs) 0 0; font-size: var(--text-lg); }
 .visit a { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
 
-.statement { padding: var(--space-4xl) clamp(var(--space-md), 4vw, var(--space-3xl)); background: var(--color-accent); color: var(--color-accent-ink); }
+.statement { padding: var(--space-4xl) clamp(var(--space-md), 4vw, var(--space-3xl)); background: var(--color-ink); color: var(--color-paper); }
 .statement h2 { max-width: 11ch; font-size: clamp(4rem, 12vw, 10rem); line-height: .86; }
 .statement .button { margin-top: var(--space-2xl); }
 .footer { display: flex; justify-content: space-between; gap: var(--space-lg); padding: var(--space-lg) clamp(var(--space-md), 4vw, var(--space-3xl)); background: var(--color-ink); color: var(--color-paper); font-size: var(--text-sm); }
