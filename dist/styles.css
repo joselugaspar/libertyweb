@@ -53,7 +53,12 @@ button, a { -webkit-tap-highlight-color: transparent; }
   overflow-wrap: anywhere;
   min-width: 0;
 }
-.masthead__brand span { color: var(--color-accent); }
+.masthead__sun {
+  width: .72em;
+  height: .72em;
+  margin-inline: .08em;
+  object-fit: cover;
+}
 .masthead__links { justify-content: center; border-top: var(--rule-thin) solid var(--color-rule); padding-top: var(--space-sm); }
 .masthead__links a { white-space: nowrap; }
 .masthead__links a:hover { color: var(--color-accent); }
@@ -113,31 +118,13 @@ button, a { -webkit-tap-highlight-color: transparent; }
   padding: var(--space-xl);
   display: grid;
   place-items: center;
-  background: var(--color-ink);
-  color: var(--color-paper);
+  background: var(--color-paper-2);
 }
 .sun-mark {
-  width: min(28rem, 78%);
-  aspect-ratio: 1;
-  display: grid;
-  place-items: center;
-  position: relative;
+  width: min(32rem, 92%);
+  height: auto;
+  object-fit: contain;
   animation: reveal var(--dur-slow) var(--ease-out) both;
-}
-.sun-mark::before {
-  content: "";
-  position: absolute;
-  inset: 9%;
-  background: var(--color-paper);
-  clip-path: polygon(50% 0,61% 30%,85% 15%,70% 40%,100% 50%,70% 60%,85% 85%,61% 70%,50% 100%,39% 70%,15% 85%,30% 60%,0 50%,30% 40%,15% 15%,39% 30%);
-}
-.sun-mark::after {
-  content: "";
-  position: absolute;
-  width: 30%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: var(--color-accent);
 }
 
 .section { padding: var(--space-4xl) clamp(var(--space-md), 4vw, var(--space-3xl)); }
