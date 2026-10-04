@@ -19,8 +19,8 @@
   --color-paper-alpha: oklch(95% 0.032 82 / 86%);
   --color-ink-alpha: oklch(23% 0.024 220 / 88%);
   --color-shadow: oklch(13% 0.02 220 / 28%);
-  --font-display: "Bricolage Grotesque", sans-serif;
-  --font-body: "IBM Plex Sans", sans-serif;
+  --font-display: "Rokkitt", serif;
+  --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-sign: "Rokkitt", serif;
   --space-2xs: 0.25rem;
   --space-xs: 0.5rem;
