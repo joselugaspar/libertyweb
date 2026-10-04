@@ -1,7 +1,12 @@
 {
   "date": "2026-10-04",
-  "signals": "empty project",
-  "framework": "vanilla HTML",
-  "motion": "motion-cut",
-  "preserve": []
+  "signals": "existing Liberty Tattoo Astro landing page; user requested a full redesign following their PekoBoop and No Glory workflow",
+  "framework": "Astro 6 with component-scoped content and global CSS tokens",
+  "motion": "motion-requested: nav sunrise morph, controlled hero rotation, one-shot intersection reveals",
+  "preserve": [
+    "Astro project structure",
+    "Instagram-sourced tattoo photography",
+    "exact Liberty sun geometry",
+    "verified studio address and contact details"
+  ]
 }

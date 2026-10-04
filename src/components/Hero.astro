@@ -1,0 +1,40 @@
+---
+const instagram = "https://www.instagram.com/libertytattoo.cordoba/";
+---
+
+<section class="hero" id="inicio" aria-labelledby="hero-title" data-hero>
+  <div class="hero__slides" aria-label="Espacio reservado para fotografías del equipo tatuando">
+    <div class="hero-slide is-active" data-hero-slide>
+      <span>Placeholder · integrante tatuando · 01</span>
+    </div>
+    <div class="hero-slide" data-hero-slide>
+      <span>Placeholder · detalle de trabajo · 02</span>
+    </div>
+    <div class="hero-slide" data-hero-slide>
+      <span>Placeholder · equipo en estudio · 03</span>
+    </div>
+  </div>
+  <div class="hero__shade" aria-hidden="true"></div>
+  <div class="hero__wordmark hero-load">
+    <h1 id="hero-title">
+      <span>Liberty</span>
+      <img src="/liberty-sun.png" alt="" width="164" height="160" />
+      <span>Tattoo</span>
+    </h1>
+  </div>
+  <div class="hero__caption hero-load">
+    <p>Casa de paso · estudio de tatuaje · Córdoba</p>
+    <a class="type-link type-link--light" href={instagram} target="_blank" rel="noreferrer">Cruza el umbral <span aria-hidden="true">↗</span></a>
+  </div>
+  <button class="hero__counter hero-load" type="button" data-slide-toggle aria-pressed="false" aria-label="Pausar carrusel">
+    <span data-slide-current>01</span><span>/ 03</span>
+  </button>
+</section>
+
+<section class="intro-band" aria-labelledby="intro-title">
+  <p class="section-kicker" data-reveal>El umbral</p>
+  <div class="intro-band__copy">
+    <h2 id="intro-title" data-reveal>Entras con una idea.<br />Sales con algo tuyo.</h2>
+    <p data-reveal>Liberty es una casa de paso: un lugar para llegar, sentarse, hablar y transformar una idea en una pieza que sigue el viaje contigo.</p>
+  </div>
+</section>

@@ -1,0 +1,31 @@
+---
+const instagram = "https://www.instagram.com/libertytattoo.cordoba/";
+---
+
+<header class="site-nav" data-site-nav>
+  <div class="site-nav__inner">
+    <a class="site-nav__home" href="#inicio" aria-label="Volver al inicio">
+      <img src="/liberty-sun.png" alt="" width="48" height="47" />
+    </a>
+    <nav class="site-nav__links" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#shop">Shop</a>
+      <a href="#residentes">Residentes</a>
+      <a href="#trabajos">Trabajos</a>
+      <a href="#visitanos">Visítanos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="site-nav__menu" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-directory">
+      <span>Menú</span><span aria-hidden="true">+</span>
+    </button>
+    <a class="site-nav__cta" href={instagram} target="_blank" rel="noreferrer">Pedir cita <span aria-hidden="true">↗</span></a>
+  </div>
+  <nav class="mobile-directory" id="mobile-directory" aria-label="Directorio móvil" data-mobile-menu>
+    <a href="#inicio"><span>01</span>Inicio</a>
+    <a href="#shop"><span>02</span>Shop</a>
+    <a href="#residentes"><span>03</span>Residentes</a>
+    <a href="#trabajos"><span>04</span>Trabajos</a>
+    <a href="#visitanos"><span>05</span>Visítanos</a>
+    <a href="#contacto"><span>06</span>Contacto</a>
+  </nav>
+</header>
