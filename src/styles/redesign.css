@@ -173,18 +173,19 @@ button { -webkit-tap-highlight-color: transparent; }
   min-width: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) clamp(3.5rem, 10vw, 9rem) minmax(0, 1fr);
+  grid-template-columns: max-content clamp(3.5rem, 10vw, 9rem) max-content;
+  justify-content: center;
   align-items: center;
   gap: clamp(.5rem, 2vw, 2rem);
   font-family: var(--font-sign);
-  font-size: clamp(2.3rem, 9.3vw, 8.75rem);
+  font-size: clamp(2.3rem, 8.1vw, 8.75rem);
   font-weight: 800;
   line-height: .82;
   letter-spacing: -.025em;
   text-transform: uppercase;
-  overflow-wrap: anywhere;
   text-shadow: .045em .055em 0 var(--color-ink);
 }
+.hero__wordmark h1 span { min-width: 0; white-space: nowrap; }
 .hero__wordmark h1 span:first-child { text-align: end; }
 .hero__wordmark img { width: 100%; aspect-ratio: 1; object-fit: contain; transform: scale(1.35); }
 .hero__caption {
@@ -372,7 +373,7 @@ button { -webkit-tap-highlight-color: transparent; }
 .floating-instagram {
   position: fixed;
   z-index: 60;
-  inset: auto auto max(1rem, env(safe-area-inset-bottom)) max(1rem, env(safe-area-inset-left));
+  inset: auto max(1rem, env(safe-area-inset-right)) max(1rem, env(safe-area-inset-bottom)) auto;
   min-height: 3.75rem;
   padding: .65rem 1rem .65rem .65rem;
   display: inline-flex;
@@ -385,12 +386,18 @@ button { -webkit-tap-highlight-color: transparent; }
   box-shadow: .25rem .25rem 0 var(--color-dermaglo-red);
   font-weight: 700;
   white-space: nowrap;
+  transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
   animation: instagram-arrive 620ms var(--ease-out) 900ms both, instagram-breathe 6s var(--ease-in-out) 2s infinite;
 }
-.floating-instagram svg { width: 2.15rem; height: 2.15rem; fill: none; stroke: currentColor; stroke-width: 2; }
+.floating-instagram svg { width: 2.15rem; height: 2.15rem; fill: none; stroke: currentColor; stroke-width: 2; transform-origin: center; transition: transform var(--dur-fast) var(--ease-out); }
 .floating-instagram__dot { fill: currentColor; stroke: none; }
 @keyframes instagram-arrive { from { opacity: 0; transform: translateY(1.5rem) rotate(-8deg); } to { opacity: 1; transform: none; } }
 @keyframes instagram-breathe { 0%, 86%, 100% { transform: rotate(0) scale(1); } 90% { transform: rotate(-3deg) scale(1.035); } 94% { transform: rotate(3deg) scale(1.035); } }
+@keyframes instagram-icon-dance {
+  0%, 100% { transform: rotate(0) scale(1); }
+  35% { transform: rotate(-12deg) scale(1.12); }
+  70% { transform: rotate(9deg) scale(1.06); }
+}
 
 [data-reveal] {
   opacity: 0;
@@ -405,11 +412,19 @@ button { -webkit-tap-highlight-color: transparent; }
   .site-nav__cta:hover { transform: translateY(-1px); background: var(--color-paper); color: var(--color-ink); }
   .work-piece a:hover img { transform: scale(1.025); filter: saturate(1) contrast(1); }
   .booking-card:hover { transform: translateY(-3px); }
-  .floating-instagram:hover { animation-play-state: paused; transform: translateY(-3px) rotate(-2deg); }
+  .floating-instagram:hover { animation-play-state: paused; transform: translateY(-4px); }
+  .floating-instagram:hover svg { animation: instagram-icon-dance 480ms var(--ease-out) both; }
 }
+.floating-instagram:focus-visible { transform: translateY(-4px); }
+.floating-instagram[aria-disabled="true"] { opacity: .5; cursor: not-allowed; pointer-events: none; }
 .site-nav__cta:active,
-.booking-card:active,
-.floating-instagram:active { transform: translateY(0); }
+.booking-card:active { transform: translateY(0); }
+.floating-instagram:active {
+  animation-play-state: paused;
+  transform: translateY(.2rem) scale(.92);
+  box-shadow: .08rem .08rem 0 var(--color-dermaglo-red);
+}
+.floating-instagram:active svg { transform: rotate(-8deg) scale(.86); }
 
 @media (min-width: 90rem) {
   .site-nav__inner { width: calc(100% - 4rem); }
@@ -470,7 +485,7 @@ button { -webkit-tap-highlight-color: transparent; }
 
 @media (max-width: 40rem) {
   .hero__wordmark { inset-inline: .75rem; padding: .5rem .65rem; box-shadow: .28rem .28rem 0 var(--color-ink); }
-  .hero__wordmark h1 { grid-template-columns: minmax(0, 1fr) 3.25rem minmax(0, 1fr); gap: .35rem; font-size: clamp(1.95rem, 10.5vw, 2.85rem); letter-spacing: -.025em; }
+  .hero__wordmark h1 { grid-template-columns: max-content 2.75rem max-content; gap: .35rem; font-size: clamp(1.55rem, 7.9vw, 2.85rem); letter-spacing: -.025em; }
   .hero__caption { inset-inline-start: 1rem; inset-block-end: 6rem; }
   .hero__caption p { max-width: 15rem; }
   .hero__counter { inset-inline-end: 1rem; inset-block-end: 1.5rem; }
