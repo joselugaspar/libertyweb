@@ -2,7 +2,7 @@
  * Hallmark · genre: editorial-brand · macrostructure: Photographic · theme: studied-DNA (source: PekoBoop + No Glory + Liberty references) · enrichment: Instagram photography + vector brand mark · nav: N10 adapted · footer: Ft5
  * contrast: pass (40–41) · nav/footer/slop: pass (42–45) · honest/chrome/tokens: pass (46–48) · mobile: pass (34, 49–57)
  */
-@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=IBM+Plex+Sans:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=IBM+Plex+Sans:wght@400;500;600&family=Rokkitt:wght@700;800&display=swap");
 @import "./tokens.css";
 
 * { box-sizing: border-box; }
@@ -163,6 +163,11 @@ button { -webkit-tap-highlight-color: transparent; }
   inset: 50% clamp(1rem, 4vw, 4rem) auto;
   transform: translateY(-50%);
   z-index: 2;
+  padding: clamp(.55rem, 1.4vw, 1.1rem) clamp(.75rem, 2.5vw, 2.5rem);
+  border: 2px solid var(--color-sign-cream);
+  background: var(--color-sign-red);
+  color: var(--color-sign-cream);
+  box-shadow: .45rem .45rem 0 var(--color-ink);
 }
 .hero__wordmark h1 {
   min-width: 0;
@@ -171,16 +176,17 @@ button { -webkit-tap-highlight-color: transparent; }
   grid-template-columns: minmax(0, 1fr) clamp(3.5rem, 10vw, 9rem) minmax(0, 1fr);
   align-items: center;
   gap: clamp(.5rem, 2vw, 2rem);
-  font-family: var(--font-display);
-  font-size: clamp(2.3rem, 10.2vw, 9.5rem);
+  font-family: var(--font-sign);
+  font-size: clamp(2.3rem, 9.3vw, 8.75rem);
   font-weight: 800;
   line-height: .82;
-  letter-spacing: -.075em;
+  letter-spacing: -.025em;
   text-transform: uppercase;
   overflow-wrap: anywhere;
+  text-shadow: .045em .055em 0 var(--color-ink);
 }
 .hero__wordmark h1 span:first-child { text-align: end; }
-.hero__wordmark img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius-sm); }
+.hero__wordmark img { width: 100%; aspect-ratio: 1; object-fit: contain; transform: scale(1.35); }
 .hero__caption {
   position: absolute;
   z-index: 2;
@@ -463,8 +469,8 @@ button { -webkit-tap-highlight-color: transparent; }
 }
 
 @media (max-width: 40rem) {
-  .hero__wordmark { inset-inline: .75rem; }
-  .hero__wordmark h1 { grid-template-columns: minmax(0, 1fr) 3.5rem minmax(0, 1fr); gap: .45rem; font-size: clamp(2.05rem, 11vw, 3rem); letter-spacing: -.065em; }
+  .hero__wordmark { inset-inline: .75rem; padding: .5rem .65rem; box-shadow: .28rem .28rem 0 var(--color-ink); }
+  .hero__wordmark h1 { grid-template-columns: minmax(0, 1fr) 3.25rem minmax(0, 1fr); gap: .35rem; font-size: clamp(1.95rem, 10.5vw, 2.85rem); letter-spacing: -.025em; }
   .hero__caption { inset-inline-start: 1rem; inset-block-end: 6rem; }
   .hero__caption p { max-width: 15rem; }
   .hero__counter { inset-inline-end: 1rem; inset-block-end: 1.5rem; }

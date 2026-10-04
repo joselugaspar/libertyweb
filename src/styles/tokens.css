@@ -10,6 +10,8 @@
   --color-accent: oklch(55% 0.16 30);
   --color-accent-deep: oklch(45% 0.15 30);
   --color-accent-ink: oklch(97% 0.026 82);
+  --color-sign-red: oklch(55% 0.17 29);
+  --color-sign-cream: oklch(91% 0.045 83);
   --color-dermaglo-yellow: oklch(86% 0.17 91);
   --color-dermaglo-red: oklch(54% 0.2 27);
   --color-focus: oklch(52% 0.19 28);
@@ -19,6 +21,7 @@
   --color-shadow: oklch(13% 0.02 220 / 28%);
   --font-display: "Bricolage Grotesque", sans-serif;
   --font-body: "IBM Plex Sans", sans-serif;
+  --font-sign: "Rokkitt", serif;
   --space-2xs: 0.25rem;
   --space-xs: 0.5rem;
   --space-sm: 0.75rem;
