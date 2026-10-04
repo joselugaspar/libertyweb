@@ -225,7 +225,6 @@ button { -webkit-tap-highlight-color: transparent; }
   font-weight: 600;
   white-space: nowrap;
 }
-.type-link span { transition: transform var(--dur-fast) var(--ease-out); }
 .type-link--light { color: var(--color-paper); }
 
 .intro-band {
@@ -345,7 +344,7 @@ button { -webkit-tap-highlight-color: transparent; }
   padding: clamp(1rem, 3vw, 2.5rem);
   min-height: 20rem;
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-columns: auto minmax(0, 1fr);
   gap: var(--space-xl);
   align-items: center;
   background: var(--color-aqua);
@@ -357,7 +356,6 @@ button { -webkit-tap-highlight-color: transparent; }
 .booking-card__copy { display: grid; gap: var(--space-sm); }
 .booking-card__copy > span { font-size: var(--text-sm); font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
 .booking-card__copy strong { font-family: var(--font-display); font-size: clamp(3rem, 8vw, 7rem); line-height: .88; letter-spacing: -.055em; }
-.booking-card__arrow { align-self: start; font-size: clamp(2rem, 5vw, 4rem); }
 
 .site-footer { padding: clamp(5rem, 9vw, 9rem) clamp(1rem, 5vw, 5rem) var(--space-xl); background: var(--color-ink); color: var(--color-paper); }
 .site-footer__statement p { margin: 0 0 var(--space-lg); font-size: var(--text-sm); letter-spacing: .1em; text-transform: uppercase; }
@@ -399,7 +397,6 @@ button { -webkit-tap-highlight-color: transparent; }
 @media (hover: hover) and (pointer: fine) {
   .site-nav__links a:hover::after { transform: scaleX(1); transform-origin: left; }
   .site-nav__cta:hover { transform: translateY(-1px); background: var(--color-paper); color: var(--color-ink); }
-  .type-link:hover span { transform: translate(.18rem, -.18rem); }
   .work-piece a:hover img { transform: scale(1.025); filter: saturate(1) contrast(1); }
   .booking-card:hover { transform: translateY(-3px); }
   .floating-instagram:hover { animation-play-state: paused; transform: translateY(-3px) rotate(-2deg); }
@@ -461,7 +458,6 @@ button { -webkit-tap-highlight-color: transparent; }
   .visit__head,
   .visit__details { grid-column: 1; grid-row: auto; }
   .booking-card { grid-column: 1; min-height: 16rem; grid-template-columns: auto minmax(0, 1fr); }
-  .booking-card__arrow { display: none; }
   .site-footer__line { grid-template-columns: minmax(0, 1fr) auto; }
   .site-footer__line a:last-child { grid-column: 1 / -1; }
 }
