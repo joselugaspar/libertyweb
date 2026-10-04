@@ -1,7 +1,3 @@
----
-const instagram = "https://www.instagram.com/libertytattoo.cordoba/";
----
-
 <header class="site-nav" data-site-nav>
   <div class="site-nav__inner">
     <a class="site-nav__home" href="#inicio" aria-label="Volver al inicio">
@@ -18,9 +14,8 @@ const instagram = "https://www.instagram.com/libertytattoo.cordoba/";
     <button class="site-nav__menu" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-directory">
       <span>Menú</span><span aria-hidden="true">+</span>
     </button>
-    <a class="site-nav__cta" href={instagram} target="_blank" rel="noreferrer">Pedir cita</a>
   </div>
-  <nav class="mobile-directory" id="mobile-directory" aria-label="Directorio móvil" data-mobile-menu>
+  <nav class="mobile-directory" id="mobile-directory" aria-label="Directorio móvil" aria-hidden="true" data-mobile-menu>
     <a href="#inicio"><span>01</span>Inicio</a>
     <a href="#shop"><span>02</span>Shop</a>
     <a href="#residentes"><span>03</span>Residentes</a>

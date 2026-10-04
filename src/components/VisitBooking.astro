@@ -2,7 +2,7 @@
 const instagram = "https://www.instagram.com/libertytattoo.cordoba/";
 ---
 
-<section class="visit" id="visitanos" aria-labelledby="visit-title">
+<section class="visit" id="visitanos" aria-labelledby="visit-title" data-zone-reveal>
   <header class="visit__head">
     <p class="section-kicker" data-reveal>05 · Cómo llegar</p>
     <h2 id="visit-title" data-reveal>Nos vemos<br />en Córdoba.</h2>
@@ -17,6 +17,20 @@ const instagram = "https://www.instagram.com/libertytattoo.cordoba/";
       <h3>Contacto</h3>
       <p><a href="tel:+34633926700">633 92 67 00</a><br /><a href={instagram} target="_blank" rel="noreferrer">@libertytattoo.cordoba</a></p>
     </div>
+  </div>
+  <div class="visit__map" id="mapa" data-reveal>
+    <div class="visit__map-fallback" aria-hidden="true">
+      <span class="visit__street visit__street--horizontal">C. Claudio Marcelo</span>
+      <span class="visit__street visit__street--vertical">C. María Cristina</span>
+      <span class="visit__map-marker"><img src="/liberty-sun.png" alt="" width="54" height="53" /><span>Liberty Tattoo</span></span>
+    </div>
+    <iframe
+      title="Mapa de Liberty Tattoo en Calle María Cristina 1, Córdoba"
+      src="https://www.openstreetmap.org/export/embed.html?bbox=-4.7810%2C37.8825%2C-4.7742%2C37.8868&amp;layer=mapnik&amp;marker=37.8846%2C-4.7776"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      allowfullscreen
+    ></iframe>
   </div>
   <a class="booking-card" id="contacto" href={instagram} target="_blank" rel="noreferrer" data-reveal>
     <span class="booking-card__seal"><img src="/liberty-mark.svg" width="88" height="86" alt="" /></span>
