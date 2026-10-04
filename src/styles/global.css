@@ -4,7 +4,7 @@
  * contrast: pass (40–41) · nav/footer/slop: pass (42–45) · honest/chrome/tokens: pass (46–48) · mobile: pass (34, 49–57)
  */
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap");
-@import url("./tokens.css");
+@import "./tokens.css";
 
 * { box-sizing: border-box; }
 html, body { margin: 0; overflow-x: clip; }
